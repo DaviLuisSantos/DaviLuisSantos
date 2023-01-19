@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @DaviLuisSantos
-- 👀 I’m interested in JavaScript and C#
-- 🌱 I’m currently learning React.Js and Unity
+- 👀 I’m interested in Java, JavaScript and C#
+- 🌱 I’m currently learning React.Js and ASP.NET
 - 💞️ I’m looking to collaborate on ...
 - 📫 How to reach me ...
 
