@@ -4,7 +4,7 @@ Sou um desenvolvedor de software apaixonado e atualmente estou cursando Análise
 
 ## Habilidades e Tecnologias
 
-- Backend: PHP, Node.js, Java, .NET
+- Backend: PHP, Node.js, .NET
 - Frontend: React, jQuery, Ajax, Bootstrap
 - Bancos de Dados: Firebird, PostgreSQL
 - API: RESTful
