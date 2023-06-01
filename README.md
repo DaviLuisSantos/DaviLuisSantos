@@ -21,7 +21,7 @@ Atualmente, tenho mais de 60 cursos concluídos no LinkedIn Learning, abrangendo
 
 - **Sistema de Cadastro de Visitantes**: Este projeto é um sistema de cadastro de visitantes que permite ao usuário tirar uma foto do visitante usando qualquer dispositivo e enviar essa foto para dispositivos de reconhecimento facial. O objetivo é simplificar e agilizar o processo de cadastro. O sistema é responsivo e desenvolvido em PHP, com utilização de AJAX e Bootstrap.
 
-- **Dashboard Modular**: O segundo projeto é um dashboard modular altamente personalizável e escalonável. Ele coleta informações de um banco de dados e as exibe de forma visualmente atraente. O dashboard também é responsivo e utiliza PHP, Chart.js e jQuery.
+- **Dashboard Modular**: O segundo projeto é um dashboard modular altamente personalizável e escalonável. Ele coleta informações de um banco de dados e as exibe de forma visualmente atraente. O dashboard também é responsivo e utiliza PHP, Chart.js e jQuery. Você pode acessar o repositório do dashboard [aqui](https://github.com/DaviLuisSantos/Dashboard).
 
 ## Contato
 
