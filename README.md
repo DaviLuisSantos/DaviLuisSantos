@@ -1,37 +1,35 @@
-# Olá! 👋 Eu sou o Davi Luis
+# 👋 Hi there!  
 
-Sou um desenvolvedor de software apaixonado e atualmente estou cursando Análise e Desenvolvimento de Sistemas e Ciência da Computação. Tenho 21 anos e uma sólida experiência principalmente no desenvolvimento backend com PHP, Node.js, Java e .NET, mas também possuo noções sólidas de frontend com React, jQuery, Ajax e Bootstrap.
+I'm a **Full Stack Developer** with 4+ years of experience, passionate about crafting web applications that combine functionality with exceptional user experiences. I thrive on building **scalable**, **high-performance solutions** that are intuitive and impactful.  
 
-## Habilidades e Tecnologias
+---
 
-- Backend: PHP, Node.js, .NET
-- Frontend: React, jQuery, Ajax, Bootstrap
-- Bancos de Dados: Firebird, PostgreSQL
-- API: RESTful
-- Ferramentas: Git, Trello
-- Design Gráfico: Photoshop
-- Modelagem 3D: SketchUp
-- Edição de Vídeo: Premiere
+### 🛠️ My Tech Stack:  
 
-## Cursos e Aprendizado
+#### **Backend**  
+- **Express.js** and **.NET** for creating robust, efficient, and secure APIs.  
 
-Atualmente, tenho mais de 60 cursos concluídos no LinkedIn Learning, abrangendo uma variedade de tópicos relacionados ao desenvolvimento de software, design gráfico e edição de vídeo. Essa busca constante por aprendizado e aprimoramento reflete meu comprometimento em me manter atualizado com as tecnologias mais recentes e adquirir novas habilidades.
+#### **Frontend**  
+- **Next.js**, **React**, and **Vue.js** for building dynamic, responsive user interfaces.  
+- Focused on performance optimization and **server-side rendering** with **Next.js**.  
 
-## Projetos
+#### **Databases**  
+- Expertise in **PostgreSQL**, **SQLite**, and **Firebird** for reliable data management and storage solutions.  
 
-- **Sistema de Cadastro de Visitantes**: Este projeto é um sistema de cadastro de visitantes que permite ao usuário tirar uma foto do visitante usando qualquer dispositivo e enviar essa foto para dispositivos de reconhecimento facial. O objetivo é simplificar e agilizar o processo de cadastro. O sistema é responsivo e desenvolvido em PHP, com utilização de AJAX e Bootstrap.
+#### **APIs**  
+- Skilled in designing and implementing **RESTful APIs** for seamless integrations.  
 
-- **Dashboard Modular**: O segundo projeto é um dashboard modular altamente personalizável e escalonável. Ele coleta informações de um banco de dados e as exibe de forma visualmente atraente. O dashboard também é responsivo e utiliza PHP, Chart.js e jQuery. Você pode acessar o repositório do dashboard [aqui](https://github.com/DaviLuisSantos/Dashboard).
+#### **Docker**  
+- Leveraging Docker to streamline development workflows, deployment, and scalability.  
 
-## Contato
+---
 
-Sinta-se à vontade para entrar em contato comigo para discutir oportunidades de colaboração, projetos interessantes ou apenas para bater um papo sobre desenvolvimento de software, design gráfico ou edição de vídeo.
+### 💡 Why Work With Me?  
 
-- E-mail: costasantos.daviluis@gmail.com
-- LinkedIn: [Perfil do LinkedIn](https://www.linkedin.com/in/davi-luis-santos-costa-b96725218/)
+- Enthusiast of **software architecture** and **design patterns**, ensuring code quality, maintainability, and scalability.  
+- A collaborative team player committed to delivering innovative, high-quality software solutions.  
+- Always striving to create software that **makes a difference** and exceeds expectations.  
 
-## Contribuições
+---
 
-Se você estiver interessado em algum dos meus projetos, fique à vontade para contribuir e abrir issues. Estou sempre aberto a sugestões, feedbacks e melhorias.
-
-Espero que este README.md demonstre um pouco sobre mim como desenvolvedor de software, designer gráfico e editor de vídeo. Fique à vontade para explorar meus projetos e entrar em contato comigo. Mal posso esperar para colaborar em projetos empolgantes!
+Let's build something amazing together! 🚀  
