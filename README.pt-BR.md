@@ -2,7 +2,7 @@
 
 [🇺🇸 English](README.md) · 🇧🇷 Português
 
-**Desenvolvedor full stack do Rio de Janeiro. Construo sistemas que rodam no mundo real.**
+**Desenvolvedor full stack do Rio de Janeiro. Construo sistemas que rodam no mundo real, de APIs e aplicações web a integrações com hardware e visão computacional.**
 
 > *Código é uma forma de pensar.* Escrevo software do jeito que tento viver: com clareza, sem atalhos e pensando em quem vem depois.
 
@@ -40,7 +40,9 @@ Uma telinha touch de US$15 ao lado do monitor mostrando status do PC, processos,
 
 ### Outros
 - **[Arco](https://github.com/DaviLuisSantos/HabitSystem)** ([no ar](https://habit-system-front.vercel.app)): PWA de hábitos com pesos, check-ins parciais e nota de consistência. API .NET 9 em vertical slices, autenticação JWT, deploy contínuo no Azure e front em Next.js.
-- **[Job Tracker](https://github.com/DaviLuisSantos/job-tracker)**: coleta vagas em paralelo, dá uma nota de 0 a 100 para cada uma com regras que entendem negação (*"no C# required"* não conta como match) e mostra tudo num dashboard local. Python, asyncio, Playwright, SQLite.
+- **Emplaca** (privado, em desenvolvimento): o meu próprio reconhecimento de placas brasileiras, com detector e OCR treinados em PyTorch com dados sintéticos e rodando nativamente no .NET via ONNX Runtime.
+- **[Job Tracker](https://github.com/DaviLuisSantos/job-tracker)**: coleta vagas em paralelo, dá uma nota de 0 a 100 para cada uma com regras que entendem negação (*"no C# required"* não conta como match), com uma etapa opcional de LLM (Gemini) para requisitos que as regras não pegam. Python, asyncio, Playwright, SQLite.
+- **Pipeline de pesquisa para o YouTube** (privado): baixa e transcreve vídeos localmente com faster-whisper e usa LLMs para analisar as transcrições e extrair insights para o meu canal.
 - **[Roteiro Manager](https://github.com/DaviLuisSantos/RoteiroManager)**: o editor de Markdown com teleprompter que eu uso para gravar meus próprios vídeos.
 
 ---
@@ -50,17 +52,20 @@ Uma telinha touch de US$15 ao lado do monitor mostrando status do PC, processos,
 - **Parto do princípio de que vai dar errado.** A rede cai, a câmera trava, o banco dá lock. Projeto pensando nisso primeiro: padrão fail-closed, retry com backoff, health check, rollback.
 - **Teste é o que me deixa fazer deploy na sexta.** A maior parte do código que importa roda onde eu não alcanço, então a suíte de testes é a minha rede de segurança.
 - **Fronteiras mantêm o código honesto.** Protocolos de fabricante, frameworks e banco ficam nas bordas, e deixo testes de arquitetura garantirem isso.
+- **Números acima de impressões.** Meço modelos em dados que eles nunca viram, mostro o que o limiar de confiança realmente entrega e deixo claro o que ainda não foi medido.
 - **Release automatizado.** Tag, build, teste, publicação, atualização. Se depende de alguém lembrar um passo, uma hora esse passo é esquecido.
 
 ## Ferramentas que eu uso
 
 - **Back end:** C# / .NET, ASP.NET Core, EF Core, MediatR, Node.js
 - **Front end:** TypeScript, React, Next.js, Astro, Tailwind CSS
+- **IA e visão computacional:** PyTorch, ONNX / ONNX Runtime, OpenCV, detecção de objetos e OCR, geração de dados sintéticos, Whisper (speech-to-text), APIs de LLM
 - **Dados:** PostgreSQL, SQLite, Firebird
-- **Também:** Python, Docker, GitHub Actions, ESP32 / PlatformIO
+- **Cloud e DevOps:** Azure, Docker, GitHub Actions
+- **Também:** Python, ESP32 / PlatformIO
 
 ## Além do código
 
-Sou formado em Análise e Desenvolvimento de Sistemas e curso Ciência da Computação. No meu canal do YouTube, o **Davi Dev**, mostro os projetos que estou construindo, as ferramentas que uso e o que venho aprendendo no caminho.
+Sou formado em Análise e Desenvolvimento de Sistemas, curso Ciência da Computação e tenho a certificação **Microsoft Certified: Azure Fundamentals (AZ-900)**. No meu canal do YouTube, o **Davi Dev**, mostro os projetos que estou construindo, as ferramentas que uso e o que venho aprendendo no caminho.
 
 [**Assistir no YouTube →**](https://www.youtube.com/channel/UCryhrvnlMcEfvisWyQurlyA)

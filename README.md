@@ -2,7 +2,7 @@
 
 🇺🇸 English · [🇧🇷 Português](README.pt-BR.md)
 
-**Full stack developer from Rio de Janeiro. I build systems that run in the real world.**
+**Full stack developer from Rio de Janeiro. I build systems that run in the real world, from APIs and web apps to hardware integrations and computer vision.**
 
 > *Code is a way of thinking.* I try to write software the way I try to live: clearly, without shortcuts, and thinking about whoever comes next.
 
@@ -40,7 +40,9 @@ A US$15 touchscreen that sits next to my monitor showing PC stats, processes, ne
 
 ### More
 - **[Arco](https://github.com/DaviLuisSantos/HabitSystem)** ([live](https://habit-system-front.vercel.app)): a habit tracker PWA with weighted habits, partial check-ins and consistency scores. Vertical-slice .NET 9 API, JWT auth, continuous deploy to Azure, Next.js front end.
-- **[Job Tracker](https://github.com/DaviLuisSantos/job-tracker)**: collects job listings concurrently, scores each one 0–100 against a profile with negation-aware rules (so *"no C# required"* doesn't count as a match), and shows them on a local dashboard. Python, asyncio, Playwright, SQLite.
+- **Emplaca** (private, in progress): my own Brazilian license plate recognition, with a detector and OCR trained in PyTorch on synthetic data and running natively in .NET via ONNX Runtime.
+- **[Job Tracker](https://github.com/DaviLuisSantos/job-tracker)**: collects job listings concurrently, scores each one 0–100 against a profile with negation-aware rules (so *"no C# required"* doesn't count as a match), with an optional LLM pass (Gemini) for requirements the rules miss. Python, asyncio, Playwright, SQLite.
+- **YouTube research pipeline** (private): downloads and transcribes videos locally with faster-whisper, then uses LLMs to analyze transcripts and extract insights for my channel.
 - **[Roteiro Manager](https://github.com/DaviLuisSantos/RoteiroManager)**: the Markdown editor and teleprompter I use to record my own videos.
 
 ---
@@ -50,17 +52,20 @@ A US$15 touchscreen that sits next to my monitor showing PC stats, processes, ne
 - **Assume things will fail.** Networks drop, cameras freeze, databases lock. I design for that first: fail-closed defaults, retries with backoff, health checks, rollbacks.
 - **Tests are what let me ship on a Friday.** Most of the code I care about runs where I can't reach it, so the test suite is my safety net.
 - **Boundaries keep code honest.** Vendor protocols, frameworks and databases stay at the edges, and I let architecture tests enforce it.
+- **Numbers over impressions.** I measure models on data they never saw, report what the confidence threshold really buys, and say clearly what hasn't been measured yet.
 - **Automate the release.** Tag, build, test, publish, update. If a human has to remember a step, it will eventually be skipped.
 
 ## Tools I reach for
 
 - **Back end:** C# / .NET, ASP.NET Core, EF Core, MediatR, Node.js
 - **Front end:** TypeScript, React, Next.js, Astro, Tailwind CSS
+- **AI & computer vision:** PyTorch, ONNX / ONNX Runtime, OpenCV, object detection and OCR, synthetic data generation, Whisper (speech-to-text), LLM APIs
 - **Data:** PostgreSQL, SQLite, Firebird
-- **Also:** Python, Docker, GitHub Actions, ESP32 / PlatformIO
+- **Cloud & DevOps:** Azure, Docker, GitHub Actions
+- **Also:** Python, ESP32 / PlatformIO
 
 ## Beyond the code
 
-I have a degree in Systems Analysis and Development and I'm studying Computer Science. On my YouTube channel, **Davi Dev**, I show the projects I'm building, the tools I use and what I'm learning along the way.
+I have a degree in Systems Analysis and Development, I'm studying Computer Science, and I'm **Microsoft Certified: Azure Fundamentals (AZ-900)**. On my YouTube channel, **Davi Dev**, I show the projects I'm building, the tools I use and what I'm learning along the way.
 
 [**Watch on YouTube →**](https://www.youtube.com/channel/UCryhrvnlMcEfvisWyQurlyA)
