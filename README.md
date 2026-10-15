@@ -64,6 +64,51 @@ A US$15 touchscreen that sits next to my monitor showing PC stats, processes, ne
 - **Cloud & DevOps:** Azure, Docker, GitHub Actions
 - **Also:** Python, ESP32 / PlatformIO
 
+## GitHub in numbers
+
+<p align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="profile-summary-card-output/github_dark/0-profile-details.svg" />
+  <img alt="Profile details" src="profile-summary-card-output/github/0-profile-details.svg" width="100%" />
+</picture>
+</p>
+
+<p align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="profile-summary-card-output/github_dark/3-stats.svg" />
+  <img alt="GitHub stats" src="profile-summary-card-output/github/3-stats.svg" width="49%" />
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="profile-summary-card-output/github_dark/4-productive-time.svg" />
+  <img alt="Productive time" src="profile-summary-card-output/github/4-productive-time.svg" width="49%" />
+</picture>
+</p>
+
+<p align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="profile-stats/releases-dark.svg" />
+  <img alt="Releases shipped" src="profile-stats/releases-light.svg" width="49%" />
+</picture>
+</p>
+
+<p align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="profile-summary-card-output/github_dark/1-repos-per-language.svg" />
+  <img alt="Repos per language" src="profile-summary-card-output/github/1-repos-per-language.svg" width="49%" />
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="profile-summary-card-output/github_dark/2-most-commit-language.svg" />
+  <img alt="Most commit language" src="profile-summary-card-output/github/2-most-commit-language.svg" width="49%" />
+</picture>
+</p>
+
+<p align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/DaviLuisSantos/DaviLuisSantos/output/github-snake-dark.svg" />
+  <img alt="Snake eating my contribution graph" src="https://raw.githubusercontent.com/DaviLuisSantos/DaviLuisSantos/output/github-snake.svg" />
+</picture>
+</p>
+
 ## Beyond the code
 
 I have a degree in Systems Analysis and Development, I'm studying Computer Science, and I'm **Microsoft Certified: Azure Fundamentals (AZ-900)**. On my YouTube channel, **Davi Dev**, I show the projects I'm building, the tools I use and what I'm learning along the way.
