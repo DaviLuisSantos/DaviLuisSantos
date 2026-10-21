@@ -17,32 +17,36 @@ Boa parte do meu trabalho acontece longe do navegador. Um carro para no portão,
 ### 🚗 Servidor LPR de controle de acesso veicular · *em produção*
 Servidor .NET on-premise, feito para a Segmix, que decide em tempo real quais veículos podem entrar em condomínios residenciais.
 - Integra **cinco fabricantes de câmeras, cada um com seu protocolo**: Alphadigi (HTTP, TCP binário, JSON-RPC), Hikvision, Motorola, Intelbras e antenas UHF Control iD. Um teste de arquitetura impede que código de fabricante vaze para o núcleo.
+- **Saindo do sistema legado:** um modo novo roda sem o sistema Delphi/Firebird ao lado do qual o servidor nasceu. Veículos, unidades, direitos de vaga e histórico de acessos vêm da plataforma que está substituindo esse sistema, e cada passagem fica guardada em disco até ser entregue.
 - **Fail-closed por design:** na dúvida, o portão fica fechado. As placas autorizadas também são sincronizadas em cada câmera, então o portão continua funcionando se o servidor cair.
 - **Operação que se recupera sozinha:** detecta câmeras que pararam de enviar eventos e as reconfigura, e se atualiza numa janela de manutenção, com rollback automático se o health check falhar.
-- **1.300+ testes automatizados** (incluindo testes de contrato contra um Firebird real no Docker) e **80+ releases**. O código é privado; os builds saem por um [repositório público de releases](https://github.com/DaviLuisSantos/AlphadigiServidorLPR-releases).
+- **1.300+ testes automatizados** (incluindo testes de contrato contra um Firebird real no Docker) e **90+ releases**. O código é privado; os builds saem por um [repositório público de releases](https://github.com/DaviLuisSantos/AlphadigiServidorLPR-releases).
 
 `.NET 10` `ASP.NET Core` `Firebird` `SQLite` `MediatR` `GitHub Actions`
 
 ### 🔐 [ControlId.Net](https://github.com/DaviLuisSantos/ControlId.Net) · *open source, no [NuGet](https://www.nuget.org/packages/ControlId.Net)*
 A biblioteca .NET que eu queria que existisse quando comecei a integrar equipamentos de acesso e relógios de ponto REP da Control iD.
+- Cobre toda a API documentada da linha de acesso (iDAccess, iDFlex, iDFace, iDBox, iDUHF), de usuários, faces e catracas a interfonia SIP, streaming RTSP e configurações de rede, com um teste que falha se alguma seção documentada ficar de fora.
+- Feita para vários equipamentos ao mesmo tempo: operações em lote com resultado por equipamento, leitura paginada com `IAsyncEnumerable` e limite de requisições simultâneas por equipamento, calibrado num iDFace real.
 - Sessão gerenciada com re-login automático, modo Push para equipamentos atrás de NAT e endpoints ASP.NET Core para autorizar acessos em tempo real.
 - Parser em streaming de arquivos AFD (Portaria 671/2021 e 1510/2009) que valida CRC-16 e não para de ler quando encontra linhas corrompidas.
-- **144 testes** rodando em .NET 8 (Linux) e .NET Framework 4.8 (Windows), publicado com Trusted Publishing (OIDC): nenhuma chave no repositório, e nada é publicado se algum teste falhar.
+- **220+ testes** rodando em .NET 8 e .NET 10 (Linux) e .NET Framework 4.8 (Windows). Três pacotes no NuGet (núcleo, DependencyInjection e AspNetCore) publicados com Trusted Publishing (OIDC): nenhuma chave no repositório, e nada é publicado se algum teste falhar.
 
-`.NET 8` `.NET Standard 2.0` `ASP.NET Core` `xUnit`
+`.NET 8` `.NET 10` `.NET Standard 2.0` `ASP.NET Core` `xUnit`
 
 ### 📟 [CYD PC Dashboard](https://github.com/DaviLuisSantos/cyd-pc-dashboard) · *firmware ESP32*
-Uma telinha touch de US$15 ao lado do monitor mostrando status do PC, processos, rede, cotações e estatísticas do YouTube. [Grave o firmware pelo navegador](https://daviluissantos.github.io/cyd-pc-dashboard/), sem instalar nada.
-- Renderização sem flicker com sprites fora da tela, portal Wi-Fi de configuração no primeiro boot e interface em português e inglês.
+Uma telinha touch de US$15 ao lado do monitor mostrando status do PC, processos, rede, verificação de serviços, cotações com histórico de 24h, o que está tocando (com controles), botões de atalho que rodam ações no PC e estatísticas do YouTube. [Grave o firmware pelo navegador](https://daviluissantos.github.io/cyd-pc-dashboard/), sem instalar nada.
+- Renderização sem flicker com sprites fora da tela, temas de cor, modo noturno, LED RGB de status, brilho automático pelo sensor de luz e interface em português e inglês.
+- Atualização pelo Wi-Fi (OTA) que volta sozinha para a versão anterior se o firmware novo não ficar saudável, interface web e um agente no PC que a tela encontra sozinha na rede, distribuído também como `.exe` para Windows, sem precisar de Python.
 - A parte divertida foi depurar o hardware: leituras SPI corrompidas porque a tela e o touch dividiam o mesmo periférico, e leituras do framebuffer deslocadas em um bit até eu baixar o clock de leitura para 6 MHz.
 
 `C++` `ESP32` `PlatformIO` `Python` `GitHub Actions`
 
 ### Outros
-- **[Arco](https://github.com/DaviLuisSantos/HabitSystem)** ([no ar](https://habit-system-front.vercel.app)): PWA de hábitos com pesos, check-ins parciais e nota de consistência. API .NET 9 em vertical slices, autenticação JWT, deploy contínuo no Azure e front em Next.js.
-- **Emplaca** (privado, em desenvolvimento): o meu próprio reconhecimento de placas brasileiras, com detector e OCR treinados em PyTorch com dados sintéticos e rodando nativamente no .NET via ONNX Runtime.
-- **[Job Tracker](https://github.com/DaviLuisSantos/job-tracker)**: coleta vagas em paralelo, dá uma nota de 0 a 100 para cada uma com regras que entendem negação (*"no C# required"* não conta como match), com uma etapa opcional de LLM (Gemini) para requisitos que as regras não pegam. Python, asyncio, Playwright, SQLite.
-- **Pipeline de pesquisa para o YouTube** (privado): baixa e transcreve vídeos localmente com faster-whisper e usa LLMs para analisar as transcrições e extrair insights para o meu canal.
+- **[Arco](https://github.com/DaviLuisSantos/HabitSystem)** ([no ar](https://habit-system-front.vercel.app)), *v1.0*: PWA de hábitos com pesos, check-ins parciais e nota de consistência. API .NET 9 em vertical slices, autenticação JWT com sessão por dispositivo, e-mail transacional, deploy contínuo no Azure e front em Next.js.
+- **Emplaca** (privado por enquanto, *alfa*): o meu próprio reconhecimento de placas brasileiras, com detector e OCR treinados em PyTorch e rodando nativamente no .NET via ONNX Runtime, em CPU. Num conjunto de teste congelado com quadros reais de câmeras de portaria, os modelos ajustados com imagens reais leem a placa exatamente em 64% dos quadros, e em 83% numa segunda instalação que nunca entrou no treino. Rodar o detector só onde cada câmera de fato vê placas cortou 37% do tempo por quadro, com a mesma precisão.
+- **[JobRadar AU](https://github.com/DaviLuisSantos/job-radar-au)**: acompanha o mercado de trabalho australiano para quem chega com visto de Working Holiday. Coleta vagas todo dia, ranqueia cada uma contra um perfil com uma nota que se explica, acompanha candidaturas e monta um retrato mensal agregado do mercado para uma newsletter para brasileiros indo para a Austrália. É a reescrita em .NET 10 do meu protótipo em Python, o [Job Tracker](https://github.com/DaviLuisSantos/job-tracker), conferida para dar as mesmas notas em 5.388 vagas reais. Arquitetura em camadas, Postgres, tela de triagem em Blazor, rodando como serviços do Windows.
+- **Pipeline de pesquisa para o YouTube** (privado): baixa as legendas dos vídeos ou, quando o YouTube limita as requisições, transcreve o áudio localmente com faster-whisper, e usa LLMs para analisar as transcrições e extrair insights para o meu canal. Roda por uma pequena interface web.
 - **[Roteiro Manager](https://github.com/DaviLuisSantos/RoteiroManager)**: o editor de Markdown com teleprompter que eu uso para gravar meus próprios vídeos.
 
 ---
@@ -58,7 +62,7 @@ Uma telinha touch de US$15 ao lado do monitor mostrando status do PC, processos,
 ## Ferramentas que eu uso
 
 - **Back end:** C# / .NET, ASP.NET Core, EF Core, MediatR, Node.js
-- **Front end:** TypeScript, React, Next.js, Astro, Tailwind CSS
+- **Front end:** TypeScript, React, Next.js, Blazor, Astro, Tailwind CSS
 - **IA e visão computacional:** PyTorch, ONNX / ONNX Runtime, OpenCV, detecção de objetos e OCR, geração de dados sintéticos, Whisper (speech-to-text), APIs de LLM
 - **Dados:** PostgreSQL, SQLite, Firebird
 - **Cloud e DevOps:** Azure, Docker, GitHub Actions

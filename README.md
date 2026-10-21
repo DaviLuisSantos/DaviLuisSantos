@@ -17,32 +17,36 @@ Most of my work happens far from the browser. A car pulls up to a gate, a camera
 ### 🚗 LPR vehicle access-control server · *in production*
 On-premise .NET server, built for Segmix, that decides in real time which vehicles may enter residential condominiums.
 - Integrates **five camera vendors, each with its own protocol**: Alphadigi (HTTP, binary TCP, JSON-RPC), Hikvision, Motorola, Intelbras and Control iD UHF antennas. An architecture test keeps vendor code out of the core.
+- **Moving off the legacy system:** a new mode runs without the Delphi/Firebird system the server was born next to. Vehicles, units, parking rights and access history come from the platform replacing it, and each passage is kept on disk until it's delivered.
 - **Fail-closed by design:** when in doubt, the gate stays shut. Authorized plates are also synced to each camera, so the gate keeps working if the server goes down.
 - **Self-healing operations:** detects cameras that stopped sending events and reconfigures them, and auto-updates during a maintenance window, rolling back if the health check fails.
-- **1,300+ automated tests** (including contract tests against a real Firebird in Docker) and **80+ releases**. The source is private; builds ship through a [public releases repo](https://github.com/DaviLuisSantos/AlphadigiServidorLPR-releases).
+- **1,300+ automated tests** (including contract tests against a real Firebird in Docker) and **90+ releases**. The source is private; builds ship through a [public releases repo](https://github.com/DaviLuisSantos/AlphadigiServidorLPR-releases).
 
 `.NET 10` `ASP.NET Core` `Firebird` `SQLite` `MediatR` `GitHub Actions`
 
 ### 🔐 [ControlId.Net](https://github.com/DaviLuisSantos/ControlId.Net) · *open source, on [NuGet](https://www.nuget.org/packages/ControlId.Net)*
 The .NET library I wished existed when I started integrating Control iD access-control devices and REP time clocks.
+- Covers the whole documented API of the access line (iDAccess, iDFlex, iDFace, iDBox, iDUHF), from users, faces and turnstiles to SIP intercom, RTSP streaming and network settings, with a test that fails if any documented section goes missing.
+- Built for many devices at once: operations across a fleet with a result per device, paginated reads with `IAsyncEnumerable`, and a per-device concurrency limit, tuned on a real iDFace.
 - Managed sessions with automatic re-login, Push mode for devices behind NAT, and ASP.NET Core endpoints to authorize access in real time.
 - A streaming parser for Brazilian time-clock files (AFD, Portaria 671/2021 and 1510/2009) that validates CRC-16 and survives corrupted lines.
-- **144 tests** on .NET 8 (Linux) and .NET Framework 4.8 (Windows), published with Trusted Publishing (OIDC): no keys in the repo, and nothing ships unless every test passes.
+- **220+ tests** on .NET 8 and .NET 10 (Linux) and .NET Framework 4.8 (Windows). Three NuGet packages (core, DependencyInjection, AspNetCore) published with Trusted Publishing (OIDC): no keys in the repo, and nothing ships unless every test passes.
 
-`.NET 8` `.NET Standard 2.0` `ASP.NET Core` `xUnit`
+`.NET 8` `.NET 10` `.NET Standard 2.0` `ASP.NET Core` `xUnit`
 
 ### 📟 [CYD PC Dashboard](https://github.com/DaviLuisSantos/cyd-pc-dashboard) · *ESP32 firmware*
-A US$15 touchscreen that sits next to my monitor showing PC stats, processes, network, market quotes and YouTube stats. [Flash it from your browser](https://daviluissantos.github.io/cyd-pc-dashboard/), no toolchain needed.
-- Flicker-free rendering with off-screen sprites, a first-boot WiFi setup portal, and a UI in English and Portuguese.
+A US$15 touchscreen that sits next to my monitor showing PC stats, processes, network, service checks, market quotes with 24h history, what's playing (with controls), shortcut buttons that run actions on the PC, and YouTube stats. [Flash it from your browser](https://daviluissantos.github.io/cyd-pc-dashboard/), no toolchain needed.
+- Flicker-free rendering with off-screen sprites, color themes, night mode, an RGB status LED, auto brightness from the light sensor, and a UI in English and Portuguese.
+- Over-the-air updates that roll back on their own if the new firmware isn't healthy, a web interface, and a PC agent the screen finds on the network by itself, also shipped as a Windows `.exe` so no Python is needed.
 - The fun part was debugging the hardware: corrupted SPI reads because the display and touch controller shared a peripheral, and framebuffer reads shifted by one bit until I dropped the read clock to 6 MHz.
 
 `C++` `ESP32` `PlatformIO` `Python` `GitHub Actions`
 
 ### More
-- **[Arco](https://github.com/DaviLuisSantos/HabitSystem)** ([live](https://habit-system-front.vercel.app)): a habit tracker PWA with weighted habits, partial check-ins and consistency scores. Vertical-slice .NET 9 API, JWT auth, continuous deploy to Azure, Next.js front end.
-- **Emplaca** (private, in progress): my own Brazilian license plate recognition, with a detector and OCR trained in PyTorch on synthetic data and running natively in .NET via ONNX Runtime.
-- **[Job Tracker](https://github.com/DaviLuisSantos/job-tracker)**: collects job listings concurrently, scores each one 0–100 against a profile with negation-aware rules (so *"no C# required"* doesn't count as a match), with an optional LLM pass (Gemini) for requirements the rules miss. Python, asyncio, Playwright, SQLite.
-- **YouTube research pipeline** (private): downloads and transcribes videos locally with faster-whisper, then uses LLMs to analyze transcripts and extract insights for my channel.
+- **[Arco](https://github.com/DaviLuisSantos/HabitSystem)** ([live](https://habit-system-front.vercel.app)), *v1.0*: a habit tracker PWA with weighted habits, partial check-ins and consistency scores. Vertical-slice .NET 9 API, JWT auth with per-device sessions, transactional email, continuous deploy to Azure, Next.js front end.
+- **Emplaca** (private for now, *alpha*): my own Brazilian license plate recognition, with a detector and OCR trained in PyTorch and running natively in .NET via ONNX Runtime on the CPU. On a frozen test set of real gate-camera frames, the models fine-tuned on real images read the plate exactly in 64% of frames, and 83% at a second site they never trained on. Running the detector only where each camera actually sees plates cut the time per frame by 37% with the same accuracy.
+- **[JobRadar AU](https://github.com/DaviLuisSantos/job-radar-au)**: tracks the Australian job market for Working Holiday visa holders. It collects listings every day, ranks them against a profile with a score that explains itself, tracks applications, and builds an aggregated monthly market snapshot for a newsletter for Brazilians moving to Australia. A .NET 10 rewrite of my Python prototype, [Job Tracker](https://github.com/DaviLuisSantos/job-tracker), checked to give the same scores on 5,388 real listings. Layered architecture, Postgres, a Blazor triage UI, running as Windows services.
+- **YouTube research pipeline** (private): pulls video captions or, when YouTube rate-limits them, transcribes the audio locally with faster-whisper, then uses LLMs to analyze transcripts and extract insights for my channel. Runs from a small web UI.
 - **[Roteiro Manager](https://github.com/DaviLuisSantos/RoteiroManager)**: the Markdown editor and teleprompter I use to record my own videos.
 
 ---
@@ -58,7 +62,7 @@ A US$15 touchscreen that sits next to my monitor showing PC stats, processes, ne
 ## Tools I reach for
 
 - **Back end:** C# / .NET, ASP.NET Core, EF Core, MediatR, Node.js
-- **Front end:** TypeScript, React, Next.js, Astro, Tailwind CSS
+- **Front end:** TypeScript, React, Next.js, Blazor, Astro, Tailwind CSS
 - **AI & computer vision:** PyTorch, ONNX / ONNX Runtime, OpenCV, object detection and OCR, synthetic data generation, Whisper (speech-to-text), LLM APIs
 - **Data:** PostgreSQL, SQLite, Firebird
 - **Cloud & DevOps:** Azure, Docker, GitHub Actions
