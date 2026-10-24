@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="340" height="200" viewBox="0 0 340 200">
   <rect x="0.5" y="0.5" width="339" height="199" rx="5" fill="#0d1117" stroke="#30363d"/>
   <text x="20" y="35" font-family="Segoe UI, Ubuntu, sans-serif" font-size="18" font-weight="600" fill="#58a6ff">Releases shipped</text>
-  <text x="20" y="98" font-family="Segoe UI, Ubuntu, sans-serif" font-size="48" font-weight="700" fill="#c9d1d9">147</text>
-  <text x="20" y="124" font-family="Segoe UI, Ubuntu, sans-serif" font-size="14" fill="#8b949e">across 7 repositories (5 private)</text>
-  <text x="20" y="160" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13" fill="#8b949e">Last 12 months: <tspan font-weight="600" fill="#c9d1d9">145</tspan></text>
-  <text x="20" y="180" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13" fill="#8b949e">Latest: <tspan font-weight="600" fill="#c9d1d9">Oct 22, 2026</tspan></text>
+  <text x="20" y="98" font-family="Segoe UI, Ubuntu, sans-serif" font-size="48" font-weight="700" fill="#c9d1d9">155</text>
+  <text x="20" y="124" font-family="Segoe UI, Ubuntu, sans-serif" font-size="14" fill="#8b949e">across 8 repositories (6 private)</text>
+  <text x="20" y="160" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13" fill="#8b949e">Last 12 months: <tspan font-weight="600" fill="#c9d1d9">153</tspan></text>
+  <text x="20" y="180" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13" fill="#8b949e">Latest: <tspan font-weight="600" fill="#c9d1d9">Oct 23, 2026</tspan></text>
 </svg>
