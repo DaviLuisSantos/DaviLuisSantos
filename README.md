@@ -8,7 +8,7 @@
 
 Most of my work happens far from the browser. A car pulls up to a gate, a camera reads the plate, and my code has a few hundred milliseconds to decide whether that gate opens. I spend my days with license plate cameras, access-control hardware, legacy Firebird databases and Windows servers in condominiums, where nobody is around to restart anything. That taught me to care about the boring parts: failure modes, tests, updates that roll themselves back.
 
-[Portfolio](https://portifolio-daviluissantos-projects.vercel.app/en/) · [LinkedIn](https://www.linkedin.com/in/davi-luis/) · [YouTube](https://www.youtube.com/channel/UCryhrvnlMcEfvisWyQurlyA) · [Instagram](https://www.instagram.com/davi.luissc/)
+[Portfolio](https://portifolio-daviluissantos-projects.vercel.app/en/?utm_source=github) · [LinkedIn](https://www.linkedin.com/in/davi-luis/) · [YouTube](https://www.youtube.com/channel/UCryhrvnlMcEfvisWyQurlyA) · [Instagram](https://www.instagram.com/davi.luissc/)
 
 ---
 

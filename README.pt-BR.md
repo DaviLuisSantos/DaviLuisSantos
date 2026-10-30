@@ -8,7 +8,7 @@
 
 Boa parte do meu trabalho acontece longe do navegador. Um carro para no portão, a câmera lê a placa e o meu código tem algumas centenas de milissegundos para decidir se o portão abre. Meu dia a dia é com câmeras de leitura de placas, controladoras de acesso, bancos Firebird legados e servidores Windows em condomínios, onde não tem ninguém por perto para reiniciar nada. Isso me ensinou a cuidar da parte chata: modos de falha, testes e atualizações que se desfazem sozinhas quando algo dá errado.
 
-[Portfólio](https://portifolio-daviluissantos-projects.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/davi-luis/) · [YouTube](https://www.youtube.com/channel/UCryhrvnlMcEfvisWyQurlyA) · [Instagram](https://www.instagram.com/davi.luissc/)
+[Portfólio](https://portifolio-daviluissantos-projects.vercel.app/?utm_source=github) · [LinkedIn](https://www.linkedin.com/in/davi-luis/) · [YouTube](https://www.youtube.com/channel/UCryhrvnlMcEfvisWyQurlyA) · [Instagram](https://www.instagram.com/davi.luissc/)
 
 ---
 
