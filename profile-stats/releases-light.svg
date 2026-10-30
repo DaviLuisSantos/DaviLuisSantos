@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="340" height="200" viewBox="0 0 340 200">
   <rect x="0.5" y="0.5" width="339" height="199" rx="5" fill="#ffffff" stroke="#e4e2e2"/>
   <text x="20" y="35" font-family="Segoe UI, Ubuntu, sans-serif" font-size="18" font-weight="600" fill="#0366d6">Releases shipped</text>
-  <text x="20" y="98" font-family="Segoe UI, Ubuntu, sans-serif" font-size="48" font-weight="700" fill="#24292e">181</text>
+  <text x="20" y="98" font-family="Segoe UI, Ubuntu, sans-serif" font-size="48" font-weight="700" fill="#24292e">194</text>
   <text x="20" y="124" font-family="Segoe UI, Ubuntu, sans-serif" font-size="14" fill="#586069">across 8 repositories (6 private)</text>
-  <text x="20" y="160" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13" fill="#586069">Last 12 months: <tspan font-weight="600" fill="#24292e">179</tspan></text>
+  <text x="20" y="160" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13" fill="#586069">Last 12 months: <tspan font-weight="600" fill="#24292e">192</tspan></text>
   <text x="20" y="180" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13" fill="#586069">Latest: <tspan font-weight="600" fill="#24292e">Oct 29, 2026</tspan></text>
 </svg>
